@@ -192,9 +192,12 @@ class FloatingService : Service() {
     private fun initWindowManger() {
         windowManager = getSystemService(WINDOW_SERVICE) as WindowManager?
         layoutParams = WindowManager.LayoutParams()
+        // 通过layout的type来指定窗口类型
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.N_MR1) {
+            // Android8以上使用
             layoutParams?.type = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
         } else {
+            // Android8以下使用
             layoutParams?.type = WindowManager.LayoutParams.TYPE_PHONE
         }
         layoutParams?.format = PixelFormat.RGBA_8888

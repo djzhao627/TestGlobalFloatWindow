@@ -1,5 +1,5 @@
 # 系统全局浮动按钮/图片/视频
-通过`WindowsManager`来进行浮动窗口的添加
+通过`WindowManager`来进行浮动窗口的添加
 
 ![预览](./preview.png)
 
